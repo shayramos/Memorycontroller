@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MemoryController
-Fri Jan 26 02:04:00 2018
+Fri Jan 26 13:59:54 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -10,7 +10,21 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |MemoryController|VGAController:inst_VGA|VGADataController:inst_2|estado_atual
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: VGAController:inst_VGA|VGADataController:inst_2
+ 13. Port Connectivity Checks: "VerificaCoord:comb_3"
+ 14. Port Connectivity Checks: "VGAController:inst_VGA|VGADataController:inst_2"
+ 15. Port Connectivity Checks: "VGAController:inst_VGA|VGASincController:inst_1"
+ 16. Port Connectivity Checks: "VGAController:inst_VGA"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +47,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Jan 26 02:04:00 2018           ;
-; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name               ; MemoryController                            ;
-; Top-level Entity Name       ; MemoryController                            ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jan 26 13:59:54 2018       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; MemoryController                            ;
+; Top-level Entity Name           ; MemoryController                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 51                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -154,38 +173,344 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; VGASincController.v              ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v ;         ;
+; VGADataController.v              ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v ;         ;
+; MemoryController.v               ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v  ;         ;
+; VGAController.v                  ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v     ;         ;
+; VerificaCoord.v                  ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v     ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 0            ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 0            ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 0            ;
+;     -- 5 input functions                    ; 0            ;
+;     -- 4 input functions                    ; 0            ;
+;     -- <=3 input functions                  ; 0            ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 51           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; Blank~output ;
+; Maximum fan-out                             ; 1            ;
+; Total fan-out                               ; 51           ;
+; Average fan-out                             ; 0.50         ;
++---------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; |MemoryController          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 51   ; 0            ; |MemoryController   ; MemoryController ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MemoryController|VGAController:inst_VGA|VGADataController:inst_2|estado_atual                                                      ;
++---------------------------+-------------------------+----------------------+---------------------------+---------------------+----------------------+
+; Name                      ; estado_atual.Espera1Clk ; estado_atual.Escreve ; estado_atual.WaitNewLinha ; estado_atual.Inicio ; estado_atual.GetData ;
++---------------------------+-------------------------+----------------------+---------------------------+---------------------+----------------------+
+; estado_atual.Inicio       ; 0                       ; 0                    ; 0                         ; 0                   ; 0                    ;
+; estado_atual.WaitNewLinha ; 0                       ; 0                    ; 1                         ; 1                   ; 0                    ;
+; estado_atual.Escreve      ; 0                       ; 1                    ; 0                         ; 1                   ; 0                    ;
+; estado_atual.Espera1Clk   ; 1                       ; 0                    ; 0                         ; 1                   ; 0                    ;
+; estado_atual.GetData      ; 0                       ; 0                    ; 0                         ; 1                   ; 1                    ;
++---------------------------+-------------------------+----------------------+---------------------------+---------------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                               ;
++---------------------------------------------------------------------------+--------------------------------------+
+; Register name                                                             ; Reason for Removal                   ;
++---------------------------------------------------------------------------+--------------------------------------+
+; VGAController:inst_VGA|VGASincController:inst_1|vcont[0..9]               ; Stuck at GND due to stuck port clock ;
+; VGAController:inst_VGA|VGASincController:inst_1|hcont[0..9]               ; Stuck at GND due to stuck port clock ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual~2            ; Lost fanout                          ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual~3            ; Lost fanout                          ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.GetData      ; Stuck at GND due to stuck port clock ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.Espera1Clk   ; Lost fanout                          ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.Escreve      ; Lost fanout                          ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.Inicio       ; Stuck at GND due to stuck port clock ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.WaitNewLinha ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 27                                    ;                                      ;
++---------------------------------------------------------------------------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                              ;
++----------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------+
+; Register name                                                        ; Reason for Removal      ; Registers Removed due to This Register                                  ;
++----------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------+
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual~2       ; Lost Fanouts            ; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.Escreve    ;
+; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.GetData ; Stuck at GND            ; VGAController:inst_VGA|VGADataController:inst_2|estado_atual.Espera1Clk ;
+;                                                                      ; due to stuck port clock ;                                                                         ;
++----------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGAController:inst_VGA|VGADataController:inst_2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; Inicio         ; 000   ; Unsigned Binary                                                     ;
+; WaitNewLinha   ; 001   ; Unsigned Binary                                                     ;
+; Escreve        ; 010   ; Unsigned Binary                                                     ;
+; Espera1Clk     ; 011   ; Unsigned Binary                                                     ;
+; GetData        ; 100   ; Unsigned Binary                                                     ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VerificaCoord:comb_3"                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; outX   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; outY   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; enable ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGAController:inst_VGA|VGADataController:inst_2"                                                                                             ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; hcont ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; vcont ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGAController:inst_VGA|VGASincController:inst_1"                                                          ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; hcont ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; vcont ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGAController:inst_VGA"                                                                                                                         ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; read_en ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; Clock25 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Data    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; boundary_port         ; 51                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jan 26 02:03:43 2018
+    Info: Processing started: Fri Jan 26 13:59:35 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MemoryController -c MemoryController
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file VGASincController.v
     Info (12023): Found entity 1: VGASincController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v Line: 1
-Error (10170): Verilog HDL syntax error at VGADataController.v(28) near text: "begin";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 28
-Error (10112): Ignored design unit "VGADataController" at VGADataController.v(1) due to previous errors File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file VGADataController.v
+Info (12021): Found 1 design units, including 1 entities, in source file VGADataController.v
+    Info (12023): Found entity 1: VGADataController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file MemoryController.v
     Info (12023): Found entity 1: MemoryController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 1
-Error (10170): Verilog HDL syntax error at BufferFIFOMemory.v(10) near text: "always";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/BufferFIFOMemory.v Line: 10
-Error (10112): Ignored design unit "BufferFIFOMemory" at BufferFIFOMemory.v(1) due to previous errors File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/BufferFIFOMemory.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file BufferFIFOMemory.v
+Info (12021): Found 1 design units, including 1 entities, in source file BufferFIFOMemory.v
+    Info (12023): Found entity 1: BufferFIFOMemory File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/BufferFIFOMemory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file FIFOEmpty.v
     Info (12023): Found entity 1: FIFOEmpty File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/FIFOEmpty.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file FIFOFull.v
     Info (12023): Found entity 1: FIFOFull File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/FIFOFull.v Line: 1
-Error (10267): Verilog HDL Module Instantiation error at VGAController.v(10): cannot connect instance ports both by order and by name File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 10
-Error (10267): Verilog HDL Module Instantiation error at VGAController.v(11): cannot connect instance ports both by order and by name File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 11
-Error (10112): Ignored design unit "VGAController" at VGAController.v(1) due to previous errors File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file VGAController.v
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
-    Error: Peak virtual memory: 942 megabytes
-    Error: Processing ended: Fri Jan 26 02:04:00 2018
-    Error: Elapsed time: 00:00:17
-    Error: Total CPU time (on all processors): 00:00:42
+Info (12021): Found 1 design units, including 1 entities, in source file VGAController.v
+    Info (12023): Found entity 1: VGAController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file VerificaCoord.v
+    Info (12023): Found entity 1: VerificaCoord File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at MemoryController.v(17): instance has no name File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 17
+Info (12127): Elaborating entity "MemoryController" for the top level hierarchy
+Info (12128): Elaborating entity "VGAController" for hierarchy "VGAController:inst_VGA" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 14
+Info (12128): Elaborating entity "VGASincController" for hierarchy "VGAController:inst_VGA|VGASincController:inst_1" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 14
+Warning (10230): Verilog HDL assignment warning at VGASincController.v(14): truncated value with size 32 to match size of target (10) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v Line: 14
+Warning (10230): Verilog HDL assignment warning at VGASincController.v(15): truncated value with size 32 to match size of target (10) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v Line: 15
+Info (12128): Elaborating entity "VGADataController" for hierarchy "VGAController:inst_VGA|VGADataController:inst_2" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 22
+Warning (10230): Verilog HDL assignment warning at VGADataController.v(72): truncated value with size 9 to match size of target (8) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 72
+Warning (10230): Verilog HDL assignment warning at VGADataController.v(73): truncated value with size 9 to match size of target (8) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 73
+Warning (10240): Verilog HDL Always Construct warning at VGADataController.v(26): inferring latch(es) for variable "read_en", which holds its previous value in one or more paths through the always construct File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at VGADataController.v(26): inferring latch(es) for variable "R", which holds its previous value in one or more paths through the always construct File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at VGADataController.v(26): inferring latch(es) for variable "G", which holds its previous value in one or more paths through the always construct File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at VGADataController.v(26): inferring latch(es) for variable "B", which holds its previous value in one or more paths through the always construct File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[0]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[1]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[2]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[3]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[4]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[5]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[6]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "B[7]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[0]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[1]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[2]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[3]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[4]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[5]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[6]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "G[7]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[0]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[1]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[2]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[3]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[4]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[5]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[6]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "R[7]" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (10041): Inferred latch for "read_en" at VGADataController.v(26) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 26
+Info (12128): Elaborating entity "VerificaCoord" for hierarchy "VerificaCoord:comb_3" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at VerificaCoord.v(12): inferring latch(es) for variable "outX", which holds its previous value in one or more paths through the always construct File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Warning (10240): Verilog HDL Always Construct warning at VerificaCoord.v(12): inferring latch(es) for variable "outY", which holds its previous value in one or more paths through the always construct File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[0]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[1]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[2]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[3]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[4]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[5]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[6]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[7]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outY[8]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[0]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[1]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[2]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[3]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[4]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[5]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[6]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[7]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[8]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Info (10041): Inferred latch for "outX[9]" at VerificaCoord.v(12) File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 12
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Blank" is stuck at VCC File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 3
+    Warning (13410): Pin "Hsync" is stuck at VCC File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 3
+    Warning (13410): Pin "Vsync" is stuck at VCC File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 3
+    Warning (13410): Pin "R[0]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[1]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[2]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[3]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[4]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[5]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[6]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "R[7]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[0]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[1]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[2]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[3]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[4]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[5]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[6]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "G[7]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[0]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[1]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[2]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[3]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[4]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[5]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[6]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+    Warning (13410): Pin "B[7]" is stuck at GND File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 4
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 24 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CoordX[0]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[1]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[2]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[3]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[4]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[5]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[6]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[7]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[8]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[9]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordX[10]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[0]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[1]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[2]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[3]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[4]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[5]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[6]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[7]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[8]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[9]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "CoordY[10]" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 6
+    Warning (15610): No output dependent on input pin "Clock50Mhz" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 5
+    Warning (15610): No output dependent on input pin "Reset" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 5
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 27 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 996 megabytes
+    Info: Processing ended: Fri Jan 26 13:59:54 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:42
 
 

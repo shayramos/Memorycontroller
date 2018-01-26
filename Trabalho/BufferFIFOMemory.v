@@ -5,7 +5,7 @@ module BufferFIFOMemory(memclk, wrptr, rdptr, wren, rden,  wrdata, rddata);
 	input [23:0]wrdata;
 	output reg[23:0] rddata;
 	
-	reg [23:0]buffer[0:63]		//calcular a profunfidade depois
+	reg [23:0]buffer[0:63];		//calcular a profunfidade depois
 
 	always@(posedge memclk) begin
 		if(wren) begin

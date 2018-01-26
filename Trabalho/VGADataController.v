@@ -2,7 +2,7 @@ module VGADataController(clock, reset, data, hcont, vcont, read_en, R, G, B);
 
 	input clock, reset;
 	input[9:0] hcont, vcont; 
-	input data[23:0];
+	input[23:0] data;
 	output reg read_en;
 	output reg[7:0] R, G, B;
 	
@@ -25,7 +25,7 @@ module VGADataController(clock, reset, data, hcont, vcont, read_en, R, G, B);
 	 always@(*) begin
 		estado_futuro = Inicio;
 		
-		case(estado_atual) begin
+		case(estado_atual)
 			Inicio: begin 
 				read_en = 0;
 				if(vcont>524 & hcont<798) begin
@@ -50,7 +50,6 @@ module VGADataController(clock, reset, data, hcont, vcont, read_en, R, G, B);
 						end
 					end 
 				end
-				
 			end
 			Escreve: begin
 				if(hcont<640) begin
