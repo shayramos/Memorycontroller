@@ -1,5 +1,5 @@
 Flow report for MemoryController
-Fri Jan 26 14:01:35 2018
+Mon Feb  5 14:47:44 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Jan 26 14:01:35 2018       ;
+; Flow Status                     ; Successful - Mon Feb  5 14:47:44 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MemoryController                            ;
 ; Top-level Entity Name           ; MemoryController                            ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/26/2018 13:59:35 ;
+; Start date & time ; 02/05/2018 14:46:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MemoryController    ;
 +-------------------+---------------------+
@@ -78,15 +78,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 247232640641514.151698597514975        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 13764780253429.151785276305977         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; fifo_bb.v                              ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
@@ -96,12 +99,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 949 MB              ; 00:00:41                           ;
-; Fitter                    ; 00:00:58     ; 1.0                     ; 2213 MB             ; 00:01:18                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 970 MB              ; 00:00:11                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 1175 MB             ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 1143 MB             ; 00:00:01                           ;
-; Total                     ; 00:01:40     ; --                      ; --                  ; 00:02:17                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 952 MB              ; 00:00:40                           ;
+; Fitter                    ; 00:00:53     ; 1.0                     ; 2213 MB             ; 00:01:12                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 965 MB              ; 00:00:11                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 1174 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 1141 MB             ; 00:00:02                           ;
+; Total                     ; 00:01:33     ; --                      ; --                  ; 00:02:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

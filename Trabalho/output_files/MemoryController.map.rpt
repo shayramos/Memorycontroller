@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MemoryController
-Fri Jan 26 13:59:54 2018
+Mon Feb  5 14:46:21 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jan 26 13:59:54 2018       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb  5 14:46:21 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; MemoryController                            ;
 ; Top-level Entity Name           ; MemoryController                            ;
@@ -173,17 +173,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; VGASincController.v              ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v ;         ;
-; VGADataController.v              ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v ;         ;
-; MemoryController.v               ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v  ;         ;
-; VGAController.v                  ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v     ;         ;
-; VerificaCoord.v                  ; yes             ; User Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v     ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; VGASincController.v              ; yes             ; User Verilog HDL File        ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v ;         ;
+; VGADataController.v              ; yes             ; User Verilog HDL File        ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v ;         ;
+; VerificaCoord.v                  ; yes             ; User Verilog HDL File        ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v     ;         ;
+; VGAController.v                  ; yes             ; User Verilog HDL File        ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v     ;         ;
+; MemoryController.v               ; yes             ; Auto-Found Verilog HDL File  ; /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -367,26 +367,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jan 26 13:59:35 2018
+    Info: Processing started: Mon Feb  5 14:46:02 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MemoryController -c MemoryController
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file controladorMemoria.v
+    Info (12023): Found entity 1: calcBaseAddress File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/controladorMemoria.v Line: 1
+    Info (12023): Found entity 2: calcUpdatedAddress File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/controladorMemoria.v Line: 21
+    Info (12023): Found entity 3: controladorMemoria File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/controladorMemoria.v Line: 47
 Info (12021): Found 1 design units, including 1 entities, in source file VGASincController.v
     Info (12023): Found entity 1: VGASincController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGASincController.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file VGADataController.v
     Info (12023): Found entity 1: VGADataController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGADataController.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file MemoryController.v
-    Info (12023): Found entity 1: MemoryController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file BufferFIFOMemory.v
-    Info (12023): Found entity 1: BufferFIFOMemory File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/BufferFIFOMemory.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file FIFOEmpty.v
-    Info (12023): Found entity 1: FIFOEmpty File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/FIFOEmpty.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file FIFOFull.v
-    Info (12023): Found entity 1: FIFOFull File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/FIFOFull.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file VGAController.v
-    Info (12023): Found entity 1: VGAController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file VerificaCoord.v
     Info (12023): Found entity 1: VerificaCoord File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VerificaCoord.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file VGAController.v
+    Info (12023): Found entity 1: VGAController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/VGAController.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
+    Info (12023): Found entity 1: fifo File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/fifo.v Line: 39
+Warning (12125): Using design file MemoryController.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MemoryController File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 1
+Warning (12300): Found the following files while searching for definition of entity "MemoryController", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: MemoryController.bdf
 Critical Warning (10846): Verilog HDL Instantiation warning at MemoryController.v(17): instance has no name File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 17
 Info (12127): Elaborating entity "MemoryController" for the top level hierarchy
 Info (12128): Elaborating entity "VGAController" for hierarchy "VGAController:inst_VGA" File: /home/shay/Documents/UFBA/2017.2/PCID/git/Trabalho/MemoryController.v Line: 14
@@ -507,10 +509,10 @@ Warning (21074): Design contains 24 input pin(s) that do not drive logic
 Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 27 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
-    Info: Peak virtual memory: 996 megabytes
-    Info: Processing ended: Fri Jan 26 13:59:54 2018
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 999 megabytes
+    Info: Processing ended: Mon Feb  5 14:46:21 2018
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Total CPU time (on all processors): 00:00:41
 
 

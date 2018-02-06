@@ -20,7 +20,7 @@ refer to the applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
 (block
-	(rect 232 16 416 224)
+	(rect 240 48 424 256)
 	(text "MemoryController" (rect 5 5 95 17)(font "Intel Clear" ))	(text "inst" (rect 5 206 23 218)(font "Intel Clear" ))	(block_io "CoordX[10..0]" (input))
 	(block_io "CoordY[10..0]" (input))
 	(block_io "Clock50Mhz" (input))
